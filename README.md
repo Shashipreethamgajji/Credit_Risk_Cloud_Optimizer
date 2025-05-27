@@ -2,90 +2,84 @@
 
 This Streamlit app predicts credit risk categories and estimates cloud resource usage (CPU hours, storage) and costs based on user inputs related to financial and credit parameters.
 
-## Features
+## 🔍 Features
 
-- Predict credit risk (Low, Medium, High) from user inputs such as age, income, loan amount, credit history, and previous defaults.
-- Estimate cloud CPU hours, storage in GB, and total estimated cloud costs.
-- Interactive dashboard with real-time updates using Streamlit.
-- Bar chart visualization of predicted cloud resource usage.
+- Predict credit risk (Low, Medium, High) based on age, income, loan amount, credit history, etc.
+- Estimate cloud CPU hours, storage in GB, and overall cost.
+- Interactive and responsive dashboard using Streamlit.
+- Visual representation of predicted resource usage.
 
-## How to Run Locally
+## 🗂️ Project Structure
 
-1. Clone the repository:
+```
+Credit_Risk_Cloud_Optimizer/
+│
+├── app/
+│   └── dashboard.py                # Main Streamlit dashboard
+│
+├── data/
+│   ├── processed/                 # Processed data files
+│   ├── raw/                       # Raw synthetic input data
+│   ├── synthetic_cloud_usage/    # Synthetic cloud usage data
+│   └── synthetic_credit_data/    # Synthetic credit risk data
+│
+├── diagrams/                      # Architecture and model diagrams
+│
+├── model/
+│   └── train_credit_model.py      # Credit risk model training script
+│
+├── models/
+│   ├── credit_risk_model.pkl      # Trained classification model
+│   ├── cpu_model.pkl              # CPU usage regression model
+│   └── storage_model.pkl          # Storage usage regression model
+│
+├── notebooks/                     # Jupyter notebooks (EDA, testing)
+│
+├── scripts/
+│   ├── generate_data.py           # Synthetic data generator
+│   ├── predict.py                 # Combined prediction script
+│   ├── train_cloud_model.py       # Cloud resource model training
+│   └── train_credit_model.py      # Credit model training script
+│
+├── venv/                          # Virtual environment files
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
+## ▶️ How to Run Locally
 
 ```bash
-git clone https://github.com/<shashipreethamgajji>/Credit_Risk_Cloud_Optimizer.git
+# Clone the repository
+git clone https://github.com/Shashipreethamgajji/Credit_Risk_Cloud_Optimizer.git
 cd Credit_Risk_Cloud_Optimizer
-````
 
-2. Create and activate a virtual environment (optional but recommended):
-
-```bash
+# (Optional) Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate  # macOS/Linux
-# or on Windows
-venv\Scripts\activate
-```
+venv\Scripts\activate     # On Windows
+# source venv/bin/activate # On Mac/Linux
 
-3. Install dependencies:
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-4. Run the app:
-
-```bash
+# Launch the Streamlit app
 streamlit run app/dashboard.py
 ```
 
----
+## 🚀 Deployment
 
-## Deployment
+The app is live and hosted using [Streamlit Community Cloud](https://streamlit.io/cloud):
 
-This app can be deployed easily on [Streamlit Community Cloud](https://share.streamlit.io).
+👉 [Launch App](https://creditriskcloudoptimizer-plmqsy5zssfwgmgmpb2wmm.streamlit.app/)
 
----
+## 👤 Author
 
-## Project Structure
+**Shashi Preetham Gajji**  
+📧 shashipreethamgajji@gmail.com  
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/shashi-preetham-g-69042614b)
 
-* `app/dashboard.py`: Main Streamlit dashboard app.
-* `models/`: Pre-trained machine learning models.
-* `train_credit_model.py`: Script to train the credit risk classification model.
-* `train_cloud_model.py`: Script to train cloud resource regression models.
-* `requirements.txt`: Python dependencies.
-* `README.md`: Project documentation.
-
----
-
-## Author
-
-Shashi Preetham Gajji — (https://www.linkedin.com/in/shashi-preetham-g-69042614b)
-
----
-
-## License
+## 📜 License
 
 This project is licensed under the MIT License.
-
----
-
-## Step 2: Push to GitHub
-
-If you haven’t created a repo yet:
-
-* Go to [https://github.com/new](https://github.com/new)
-* Name your repo `Credit_Risk_Cloud_Optimizer`
-* Make it public (or private if you want)
-* Don’t initialize with README or .gitignore (we’ll add manually)
-
-Then, in your project folder:
-
-```bash
-git init
-git add .
-git commit -m "Initial commit - Credit Risk & Cloud Resource Optimizer app"
-git branch -M main
-git remote add origin https://github.com/<your-username>/Credit_Risk_Cloud_Optimizer.git
-git push -u origin main
-```
+````
